@@ -48,8 +48,31 @@ Example: `ENV name superman`
 
 8] COPY
 
+## Dockerfile Example to install and run Apache2
 ```FROM ubuntu
-RUN apt-get update
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get -y update
 RUN apt-get -y install apache2
 ADD . /var/www/html
+ENTRYPOINT apachectl -D FOREGROUND
+ENV name superman
 ```
+
+## Run docker without sudo
+
+`sudo usermod -aG docker $USER`
+
+## Build docker image from Dockerfile
+`sudo docker build . -t <image-tag>`
+
+`sudo docker build - < Dockerfile`
+
+## Run docker 
+
+`sudo docker run -it -d -p <host-port>:<container-port> <image-tag>`
+
+
+## Access container shell
+
+`sudo docker exec -it <container-Id> bash`
+
