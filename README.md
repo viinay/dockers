@@ -40,7 +40,7 @@ docker projects and notes
 
 8] COPY
 
-``FROM ubuntu
+```FROM ubuntu
 RUN apt-get update
 RUN apt-get -y install apache2
-ADD . /var/www/html``
+ADD . /var/www/html```
