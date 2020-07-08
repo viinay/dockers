@@ -25,12 +25,23 @@ docker projects and notes
  Example:
     `RUN apt-get update` OR `RUN apt-get -y install apache2`
 
-4] CMD
+4] CMD - used to run commands on the start of the container.These commands run only when there is no argument specified while running the container.
+  
+  `CMD <cmd>`
+  
+  Example:
+  `CMD apachectl -D FOREGROUND`
 
 5] ENTRYPOINT
 
 6] ENV
 
 7] WORKDIR
+
+
+`FROM ubuntu
+RUN apt-get update
+RUN apt-get -y install apache2
+ADD . /var/www/html`
 
 8] COPY
