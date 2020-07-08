@@ -25,7 +25,7 @@ docker projects and notes
  Example:
     `RUN apt-get update` OR `RUN apt-get -y install apache2`
 
-4] CMD - used to run commands on the start of the container.These commands run only when there is no argument specified while running the container.
+4] CMD - used to run commands on the start of the container.These commands run only when there is no argument specified while running the container.CMD command gets skipped if argument is specified while running the docker.
   
   `CMD <cmd>`
   
@@ -38,7 +38,11 @@ docker projects and notes
 
 Example: `ENTRYPOINT apachectl -D FOREGROUND`
 
-6] ENV
+6] ENV - used to define environment variables in the container run-time.
+
+`ENV <name> <value>`
+
+Example: `ENV name superman`
 
 7] WORKDIR
 
