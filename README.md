@@ -18,11 +18,11 @@ docker projects and notes
    Example:
       `ADD . /var/www/html`
 
-3] RUN - used to add layers to the base image,by installing components.Each RUN statement,adds a new layer to the docker image.
+3] RUN - used to add layers to the base image,by installing components.Each RUN statement,adds a new layer to the docker image
   
-    `RUN <command to install pkgs>`
-    
-    Example:
+  `RUN <command to install pkgs>`
+  
+ Example:
     `RUN apt-get update` OR `RUN apt-get -y install apache2`
 
 4] CMD
