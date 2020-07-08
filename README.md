@@ -32,7 +32,11 @@ docker projects and notes
   Example:
   `CMD apachectl -D FOREGROUND`
 
-5] ENTRYPOINT
+5] ENTRYPOINT - used strictly run commands the moment the container initializes.The difference between CMD and ENTRYPOINT will run irrespective of the fact whether argument is specified or not.
+ 
+`ENTRYPOINT <cmd>`
+
+Example: `ENTRYPOINT apachectl -D FOREGROUND`
 
 6] ENV
 
